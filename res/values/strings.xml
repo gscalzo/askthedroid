@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello World, Magic8Droid!</string>
     <string name="app_name">Magic8Droid</string>
+    <string name="title_ask">Ask the Droid</string>
 </resources>
