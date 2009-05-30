@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:background="@drawable/pleyades">
-	<ImageView android:id="@+id/background" android:layout_width="fill_parent"
+	<ImageView android:id="@+id/android" android:layout_width="fill_parent"
 		android:layout_marginTop="15dip" android:layout_height="wrap_content"
 		android:layout_gravity="center_horizontal|top" android:src="@drawable/android" />
 	<Button android:id="@+id/ask" android:layout_width="200dip"
