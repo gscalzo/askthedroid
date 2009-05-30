@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class Magic8Droid extends Activity implements OnClickListener {
+public class AskTheDroid extends Activity implements OnClickListener {
 	private Random rand = new Random();
 	private String msgs[] = { "Are you kidding?", "As I see it, yes.",
 			"Ask again later.", "Better not tell you now.",
