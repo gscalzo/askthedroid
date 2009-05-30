@@ -3,6 +3,7 @@ package com.rubberdroid;
 import java.util.Random;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -28,13 +29,52 @@ public class AskTheDroid extends Activity implements OnClickListener,
 			"Without a doubt.", "Yes.", "Yes - definitely.",
 			"Yes, in due time.", "You may rely on it.",
 			"You will have to wait.", };
+	private MediaPlayer[] mplayers;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		View button = findViewById(R.id.ask);
-		button.setOnClickListener(this);
+		findViewById(R.id.ask).setOnClickListener(this);
+		createMplayers();
+	}
+
+	private void createMplayers() {
+		mplayers = new MediaPlayer[33];
+		int i = 0;
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a1);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a2);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a3);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a4);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a5);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a6);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a7);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a8);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a9);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a10);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a11);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a12);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a13);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a14);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a15);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a16);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a17);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a18);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a19);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a20);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a21);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a22);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a23);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a24);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a25);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a26);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a27);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a28);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a29);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a30);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a31);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a32);
+		mplayers[i++] = MediaPlayer.create(this, R.raw.a33);
 	}
 
 	@Override
@@ -53,8 +93,13 @@ public class AskTheDroid extends Activity implements OnClickListener,
 
 	private String randomMsg() {
 		int idx = rand.nextInt(msgs.length);
+		playMsngNo(idx);
 		String msg = msgs[idx];
 		return msg;
+	}
+
+	private void playMsngNo(int idx) {
+		mplayers[idx].start();
 	}
 
 	@Override
