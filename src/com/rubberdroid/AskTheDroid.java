@@ -35,13 +35,13 @@ public class AskTheDroid extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		String msg = randomMsgù();
+		String msg = randomMsg();
 		Toast toast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
 		toast.setGravity(Gravity.CENTER, 0, 0);
 		toast.show();
 	}
 
-	private String randomMsgù() {
+	private String randomMsg() {
 		int idx = rand.nextInt(msgs.length);
 		String msg = msgs[idx];
 		return msg;

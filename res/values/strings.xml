@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, Magic8Droid!</string>
-    <string name="app_name">Ask the Droid</string>
+    <string name="app_name">Ask the \nDroid</string>
     <string name="title_ask">Ask the Droid</string>
 </resources>
