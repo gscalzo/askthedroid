@@ -1,5 +1,4 @@
 # Ask The Droid
-===============
 
 My very first attemp to learn Android!
 
